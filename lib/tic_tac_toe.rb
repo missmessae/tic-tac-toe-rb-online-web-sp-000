@@ -24,6 +24,7 @@ end
 
 
 def play(board)
+<<<<<<< HEAD
   until over?(board) == true
     turn(board)
   end
@@ -33,12 +34,23 @@ def play(board)
       puts "Congratulations O!"
     elsif draw?(board)
       puts "Cat's Game!"
+=======
+  counter = 0
+until counter >= 9
+    turn(board)
+    counter += 1
+>>>>>>> d3322c885804bc9d10889946ef0824bc330dfe0c
   end
 end
 
 
+<<<<<<< HEAD
 def move(board, index, character)
     board[index] = character
+=======
+def move(array, index, value="X")
+    array[index] = value
+>>>>>>> d3322c885804bc9d10889946ef0824bc330dfe0c
 end
 
 
@@ -87,8 +99,12 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
+<<<<<<< HEAD
     character = current_player(board)
     move(board, index, character)
+=======
+    move(board, index)
+>>>>>>> d3322c885804bc9d10889946ef0824bc330dfe0c
     display_board(board)
   else
     turn(board)
